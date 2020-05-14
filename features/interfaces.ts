@@ -1,7 +1,4 @@
-interface Vehicle {
-  name: string;
-  year: Date;
-  broken: boolean;
+interface Reportable {
   summary(): string
 }
 
@@ -12,10 +9,21 @@ const oldCivic = {
   summary() {
     return `Name: ${this.name}`
   }
+};
+
+const drink2 = {
+  color: 'brown',
+  carbonated: true,
+  sugar: 40,
+  summary(): string {
+    return `My drink has ${this.sugar} grams of sugar.`
+  }
+};
+
+// Interface acts like a gatekeeper
+const printSummary = (item: Reportable): void => {
+  console.log(item.summary());
 }
 
-const printVehicle = (vehicle: Vehicle): void => {
-  console.log(vehicle.summary());
-}
-
-printVehicle(oldCivic);
+printSummary(oldCivic);
+printSummary(drink2);
