@@ -1,8 +1,13 @@
 import { NumbersCollection } from "./NumbersCollection";
 
+export interface Sortable {
+  length: number;
+  compare(leftIndex: number, rightIndex: number): boolean
+  swap(leftIndex: number, rightIndex: number): void
+}
 
 export class Sorter {
-  constructor(public collection: NumbersCollection) /*TODO: fix me*/ {
+  constructor(public collection: Sortable) /*TODO: fix me*/ {
 
   }
   sort(): void {

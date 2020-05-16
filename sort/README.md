@@ -6,4 +6,5 @@
 
 ## Topics covered in this
 
-- Type Guards (not recommended)
+- Type Guards (Generally not recommended)
+- Interfaces (recommended)
