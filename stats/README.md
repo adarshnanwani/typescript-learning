@@ -5,3 +5,7 @@
 - Run this command to run the project: `npm install`
 
 ## Topics covered in this
+
+- Enums
+- Type Assertions
+- Reading .csv files e.g. `row[5] as MatchResult`
