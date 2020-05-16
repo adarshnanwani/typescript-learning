@@ -8,3 +8,5 @@
 
 - Type Guards (Generally not recommended)
 - Interfaces (recommended)
+- A basic LinkedList implementation
+- Abstract classes
