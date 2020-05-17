@@ -12,3 +12,4 @@
 - Generics
 - Inheritance (is-a relationship) vs. Composition (has-a relationship)
 - Favor Object Composition over Class Inheritance (in the right way)
+- Static Class Methods
