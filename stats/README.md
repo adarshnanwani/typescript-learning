@@ -9,3 +9,4 @@
 - Enums
 - Type Assertions
 - Reading .csv files e.g. `row[5] as MatchResult`
+- Generics
