@@ -5,3 +5,6 @@
 - Run this command to run the project: `npm start`
 
 ## Topics covered
+
+- Optional Props
+- type alias e.g. `type Callback = () => void`
