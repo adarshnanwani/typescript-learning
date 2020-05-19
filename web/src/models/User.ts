@@ -1,6 +1,6 @@
 import { Eventing } from './Eventing';
 
-interface UserProps { id?: number, name?: string; age?: number; }
+export interface UserProps { id?: number, name?: string; age?: number; }
 
 export class User {
   public events: Eventing = new Eventing();
