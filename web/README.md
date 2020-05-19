@@ -8,3 +8,5 @@
 
 - Optional Props
 - type alias e.g. `type Callback = () => void`
+- Eventing system
+- Generic classes
