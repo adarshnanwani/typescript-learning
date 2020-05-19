@@ -1,9 +1,11 @@
 import { User } from './models/User';
 
-const user = new User({ id: 1, name: 'Newwer', age: 0 })
+const user = User.buildUser({ age: 20 });
 
-user.save()
+console.log(user.get('age'))
 
-user.events.on('save', () => {
-  console.log('Save was triggered', user.attributes.get('name'))
-});
+user.set({ name: 'Ady' })
+
+console.log(user.get('name'))
+
+console.log(user)
