@@ -28,3 +28,6 @@
       }
     }
   ```
+
+- Composition with getters (by passing a reference inside it)
+- Bound functions (Arrow functions)
