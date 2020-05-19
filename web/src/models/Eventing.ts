@@ -16,6 +16,6 @@ export class Eventing {
       return;
     }
 
-    handlers.forEach(callback => callback())
+    handlers.forEach(callback => callback());
   }
 }
