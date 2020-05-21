@@ -34,7 +34,29 @@ router.post('/login', (req: Request, res: Response) => {
   } else {
     res.send('You must provide an email!')
   }
-
 });
+
+router.get('/', (req: Request, res: Response) => {
+  if (req.session && req.session.loggedIn) {
+    res.send(`
+      <div>
+        <div>You are logged in</div>
+        <a href="/logout">Logout</a>
+      </div>
+    `)
+  } else {
+    res.send(`
+    <div>
+      <div>You are not logged in</div>
+      <a href="/logout">Login</a>
+    </div>
+  `)
+  }
+});
+
+router.checkout('/logout', (req: Request, res: Response) => {
+  req.session = undefined;
+  res.redirect('/');
+})
 
 export { router };
