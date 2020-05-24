@@ -50,7 +50,7 @@ printAnything<string>(['a', 'b', 'c'])
 
 // Generic Constraints
 
-class Car {
+class NewCar {
   print() {
     console.log('I am a car');
   }
