@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { get, controller } from './decorators';
+import { get, controller, bodyValidator, post } from './decorators';
 
 
 @controller('/auth')
@@ -10,7 +10,7 @@ class LoginController {
       <form method="POST">
         <div>
           <label>Email:</label>
-          <input name="email"/>
+          <input name="e"/>
         </div>
         <div>
           <label>Password:</label>
@@ -20,4 +20,23 @@ class LoginController {
       </form>
     `)
   };
+
+  @post('/login')
+  @bodyValidator('email', 'password')
+  postLogin(req: Request, res: Response) {
+    const { email, password } = req.body;
+
+    if (email == 'hi@hi.com' && password == '123456') {
+      // mark this person as logged input
+      req.session = { loggedIn: true };
+      // redirect tem to the root route
+      res.redirect('/');
+    } else {
+      res.send('You must provide an email!')
+    }
+  }
+
 }
+
+
+
