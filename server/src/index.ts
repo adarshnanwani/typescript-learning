@@ -1,7 +1,7 @@
 import express, { Request, Response } from 'express';
 import cookieSession from 'cookie-session';
 import { router } from './routes/loginRoutes';
-import { router as controllerRouter } from './controllers/decorators/controller';
+import { AppRouter } from './AppRouter';
 
 import './controllers/LoginController';
 
@@ -13,7 +13,7 @@ app.use(express.urlencoded({
 }));
 app.use(cookieSession({ keys: ['sadffsad'] }));
 app.use(router);
-app.use(controllerRouter);
+app.use(AppRouter.getInstance());
 
 app.listen(5000, () => {
   console.log(`server is running`);
